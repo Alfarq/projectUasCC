@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
-
 @section('content')
     <!-- Main content goes here -->
     <section id="hero-slider" class="hero-slider">

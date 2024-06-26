@@ -29,4 +29,12 @@ class HomeController extends Controller
 
         return view('home')->with('status', session('status'));
     }
+
+    public function showDetail()
+    {
+    
+
+        // Kembali ke view detail dengan data
+        return view('/detail');
+    }
 }

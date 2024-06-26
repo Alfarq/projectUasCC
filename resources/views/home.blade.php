@@ -99,21 +99,53 @@
 <section id="posts" class="posts">
     <div class="container" data-aos="fade-up">
       <div class="row g-5">
-        <div class="col-lg-4">
+        {{-- @foreach ($concerts as $concert)
+            <div class="card shadow col-lg-4 m-2" style="box-shadow: 20px;">
+                <div class="post-entry-1 lg">
+                    <a href="single-post.html">
+                        <img src="{{ asset($concert->image) }}" class="img-fluid" style="height: 250px;" alt="{{ $concert->name }}">
+                    </a>
+                    <div class="post-meta">
+                        <span class="date">{{ $concert->organizer }}</span>
+                        <span class="mx-1">&bullet;</span>
+                        <span>{{ $concert->concert_date }}</span>
+                    </div>
+                    <h2>
+                        <a href="single-post.html">{{ $concert->name }}</a>
+                    </h2>
+                    <p class="mb-4 d-block">{{ $concert->description }}</p>
+                </div>
+            </div>
+        @endforeach --}}
+
+        @foreach ($concerts as $concert)
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <a href="single-post.html" class="d-block position-relative overflow-hidden hover-zoom">
+                    <img src="{{ asset($concert->image) }}" class="card-img-top" style="height: 250px; object-fit: cover;" alt="{{ $concert->name }}">
+                </a>
+                <div class="card-body">
+                    <div class="post-meta mb-2">
+                        <span class="badge bg-primary">{{ $concert->organizer }}</span>
+                        <span class="text-muted mx-1">&bullet;</span>
+                        <span class="text-muted">{{ \Carbon\Carbon::parse($concert->concert_date)->format('d M Y') }}</span>
+                    </div>
+                    <h5 class="card-title">
+                        <a href="single-post.html" class="text-decoration-none text-dark">{{ $concert->name }}</a>
+                    </h5>
+                    <p class="card-text">{{ $concert->description }}</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+
+        {{-- <div class="col-lg-4">
           <div class="post-entry-1 lg">
             <a href="single-post.html"><img src="img/post-landscape-1.jpg" alt="" class="img-fluid"></a>
             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
             <h2><a href="single-post.html">11 Work From Home Part-Time Jobs You Can Do Now</a></h2>
             <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
-
-            <div class="d-flex align-items-center author">
-              <div class="photo"><img src="img/person-1.jpg" alt="" class="img-fluid"></div>
-              <div class="name">
-                <h3 class="m-0 p-0">Cameron Williamson</h3>
-              </div>
-            </div>
           </div>
-
         </div>
 
         <div class="col-lg-8">
@@ -199,7 +231,7 @@
 
             </div> <!-- End Trending Section -->
           </div>
-        </div>
+        </div> --}}
 
       </div> <!-- End .row -->
     </div>

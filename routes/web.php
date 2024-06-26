@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ConcertController;
 use Illuminate\Support\Facades\Auth;
 
 // Route::get('/', function () {
@@ -40,3 +41,5 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register'); // Mengarahkan ke view auth.register
 })->name('register');
+
+Route::get('/', [ConcertController::class, 'index'])->name('concert');

@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (!session()->has('status')) {
+            session(['status' => 'You are logged in!']);
+        }
+
+        return view('home')->with('status', session('status'));
     }
 }

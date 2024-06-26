@@ -40,8 +40,19 @@
         <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
 
         <!-- Login and Register Buttons -->
-        <a href="{{ route('login') }}" class="btn btn-primary mx-2">Login</a>
-        <a href="{{ route('register') }}" class="btn btn-secondary mx-2">Register</a>
+        @guest
+          <a href="{{ route('login') }}" class="btn btn-primary mx-2">Login</a>
+          <a href="{{ route('register') }}" class="btn btn-secondary mx-2">Register</a>
+        @else
+          <a href="{{ route('logout') }}" class="btn btn-primary mx-2"
+             onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+            Logout
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+          </form>
+        @endguest
 
         <i class="bi bi-list mobile-nav-toggle"></i>
 

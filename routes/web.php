@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -17,8 +18,16 @@ use App\Http\Controllers\HomeController;
 
 
 
+// Route::get('/', function () {
+//     return view('guest');
+// });
+
 Route::get('/', function () {
-    return view('index');
+    if (Auth::check()) {
+        return redirect('/home');
+    } else {
+        return view('guest');
+    }
 });
 
 Auth::routes();

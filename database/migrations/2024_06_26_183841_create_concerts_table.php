@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('organizer');
             $table->string('guest_star');
             $table->date('concert_date');
+            $table->date('locations');
             $table->text('description');
             $table->string('image');
             $table->timestamps();

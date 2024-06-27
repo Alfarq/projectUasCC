@@ -147,9 +147,9 @@
             <h2><a href="single-post.html">11 Work From Home Part-Time Jobs You Can Do Now</a></h2>
             <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
           </div>
-        </div>
+        </div> --}}
 
-        <div class="col-lg-8">
+        {{-- <div class="col-lg-8">
           <div class="row g-5">
             <div class="col-lg-4 border-start custom-border">
               <div class="post-entry-1">

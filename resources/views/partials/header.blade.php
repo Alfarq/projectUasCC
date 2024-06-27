@@ -45,18 +45,17 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="single-post.html">Articles</a></li>
           <li class="dropdown"><a href="category.html"><span>Info Konser</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li></li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Juli</a></li></li>
+              <li><a href="#">Agustus</a></li>
+              <li><a href="#">September</a></li>
+              <li><a href="#">Oktober</a></li>
             </ul>
           </li>
-
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="single-post.html">Articles</a></li>       
+          <li><a href="about.html">Release</a></li>
+          <li><a href="contact.html">Media Partnership</a></li>
         </ul>
       </nav><!-- .navbar -->
 

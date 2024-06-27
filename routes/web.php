@@ -5,24 +5,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConcertController;
 use Illuminate\Support\Facades\Auth;
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Auth::routes();
-    
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
-// Route::get('/', function () {
-//     return view('guest');
-// });
-
 Route::get('/', function () {
     if (Auth::check()) {
         return redirect('/home');
@@ -33,7 +15,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [ConcertController::class, 'index'])->name('home');
 Route::get('/login', function () {
     return view('auth.login'); // Mengarahkan ke view auth.login
 })->name('login');
@@ -45,3 +27,4 @@ Route::get('/register', function () {
 Route::get('/detail', [HomeController::class, 'showDetail'])->name('detail');
 Route::get('/home', [ConcertController::class, 'index'])->name('concerts.index');
 Route::get('/concert/{id}', [ConcertController::class, 'show'])->name('concert.show');
+

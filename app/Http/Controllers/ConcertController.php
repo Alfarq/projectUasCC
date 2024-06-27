@@ -17,7 +17,10 @@ class ConcertController extends Controller
     // Method untuk menampilkan detail konser di halaman detail
     public function show($id)
     {
-        $concert = Concert::findOrFail($id);
+        // $concert = Concert::findOrFail($id);
+        // return view('detail', compact('concert'));
+
+        $concert = Concert::with('guestStars')->findOrFail($id);
         return view('detail', compact('concert'));
     }
 }

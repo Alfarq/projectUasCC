@@ -33,15 +33,18 @@
     transform-origin: bottom left;
   }
 
+  .headline-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparan */
+    border: 2px solid lightgray; /* Outline abu-abu muda */
+  }
+
     </style>
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
       <a href="{{ route('concerts.index') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>MusikFest</h1> <img src="{{ asset('img/logokita2.png') }}" alt="">
       </a>
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{{ route('concerts.index') }}">Home</a></li>

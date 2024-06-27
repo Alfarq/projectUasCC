@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusikFest</title>
-
-    <!-- Favicons -->
-    <link rel="icon" href="{{ asset('img/favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ asset('img/logocuttt.png') }}" type="image/png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +29,7 @@
     * Author: BootstrapMade.com
     * License: https:///bootstrapmade.com/license/
     ======================================================== -->
+
 </head>
 <body>
     <header>
@@ -44,14 +42,12 @@
     <footer>
         @include('partials.footer') <!-- Include partial for the footer -->
     </footer>
-
     <!-- Vendor JS Files -->
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
     <script src="{{ asset('vendor/aos/aos.js') }}"></script>
     <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
-
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

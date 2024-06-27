@@ -68,7 +68,7 @@
         <div class="card custom-shadow border-0" style="border-radius: 15px;">
           <div class="card-body text-center">
             <h4 class="card-title">Tiket</h4>
-            <a href="{{ $concert->link_ticket }}" class="btn btn-dark w-100" target="_blank">Beli disini</a>
+            <a href="{{ $concert->link_ticket }}" class="btn btn-dark w-100" target="_blank">Beli Disini</a>
           </div>
         </div>
       </div>

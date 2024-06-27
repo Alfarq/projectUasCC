@@ -1,4 +1,39 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
+<style>
+        /* .custom-shadow {
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+        } */
+        .custom-shadow {
+    box-shadow: 2px 2px  10px rgba(0, 0, 0, 0.2); /* Bayangan di semua sisi */
+}
+
+.judul-link {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .judul-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease;
+    transform: scaleX(0); /* Mulai dengan lebar 0 */
+    transform-origin: bottom right;
+  }
+
+  .judul-link:hover::after {
+    transform: scaleX(1); /* Tampilkan garis bawah saat hover */
+    transform-origin: bottom left;
+  }
+
+    </style>
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
@@ -58,4 +93,25 @@
       </div>
 
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Menampilkan konten dari judul pertama secara default
+    $('.konten[data-content-index="0"]').show();
+    
+    // Sembunyikan konten dari judul kedua secara default
+    $('.konten[data-content-index="1"]').hide();
+
+    // Mengatur fungsi saat judul diklik
+    $('.judul-link').click(function() {
+      // Sembunyikan semua konten yang ditampilkan
+      $('.konten').hide();
+      // Ambil indeks judul yang diklik
+      var index = $(this).data('index');
+      // Tampilkan konten yang sesuai berdasarkan indeks
+      $('.konten[data-content-index="' + index + '"]').show();
+    });
+  });
+</script>
+
 </header>

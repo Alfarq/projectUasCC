@@ -99,7 +99,7 @@
 <section id="posts" class="posts">
     <div class="container" data-aos="fade-up">
       <div class="row g-5">
-        {{-- @foreach ($concerts as $concert)
+        <!-- {{-- @foreach ($concerts as $concert)
             <div class="card shadow col-lg-4 m-2" style="box-shadow: 20px;">
                 <div class="post-entry-1 lg">
                     <a href="single-post.html">
@@ -116,28 +116,29 @@
                     <p class="mb-4 d-block">{{ $concert->description }}</p>
                 </div>
             </div>
-        @endforeach --}}
+        @endforeach --}} -->
 
         @foreach ($concerts as $concert)
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow h-100">
-                <a href="single-post.html" class="d-block position-relative overflow-hidden hover-zoom">
-                    <img src="{{ asset($concert->image) }}" class="card-img-top" style="height: 250px; object-fit: cover;" alt="{{ $concert->name }}">
-                </a>
-                <div class="card-body">
-                    <div class="post-meta mb-2">
-                        <span class="badge bg-primary">{{ $concert->organizer }}</span>
-                        <span class="text-muted mx-1">&bullet;</span>
-                        <span class="text-muted">{{ \Carbon\Carbon::parse($concert->concert_date)->format('d M Y') }}</span>
-                    </div>
-                    <h5 class="card-title">
-                        <a href="single-post.html" class="text-decoration-none text-dark">{{ $concert->name }}</a>
-                    </h5>
-                    <p class="card-text">{{ $concert->description }}</p>
-                </div>
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card shadow h-100">
+        <a href="{{ route('concert.show', $concert->id) }}" class="d-block position-relative overflow-hidden hover-zoom">
+            <img src="{{ asset($concert->image) }}" class="card-img-top" style="height: 250px; object-fit: cover;" alt="{{ $concert->name }}">
+        </a>
+        <div class="card-body">
+            <div class="post-meta mb-2">
+                <span class="badge bg-primary">{{ $concert->organizer }}</span>
+                <span class="text-muted mx-1">&bullet;</span>
+                <span class="text-muted">{{ \Carbon\Carbon::parse($concert->concert_date)->format('d M Y') }}</span>
             </div>
+            <h5 class="card-title">
+                <a href="{{ route('concert.show', $concert->id) }}" class="text-decoration-none text-dark">{{ $concert->name }}</a>
+            </h5>
+            <p class="card-text">{{ $concert->description }}</p>
         </div>
-        @endforeach
+    </div>
+</div>
+@endforeach
+
 
         {{-- <div class="col-lg-4">
           <div class="post-entry-1 lg">
@@ -222,7 +223,7 @@
                   <li>
                     <a href="single-post.html">
                       <span class="number">5</span>
-                      <h3>Life Insurance And Pregnancy: A Working Mom’s Guide</h3>
+                      <h3>Life Insurance And Pregnancy: A Working Moms Guide</h3>
                       <span class="author">Jenny Wilson</span>
                     </a>
                   </li>

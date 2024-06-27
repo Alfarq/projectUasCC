@@ -41,3 +41,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register'); // Mengarahkan ke view auth.register
 })->name('register');
+
+Route::get('/detail', [HomeController::class, 'showDetail'])->name('detail');
+Route::get('/home', [ConcertController::class, 'index'])->name('concerts.index');
+Route::get('/concert/{id}', [ConcertController::class, 'show'])->name('concert.show');

@@ -15,7 +15,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [ConcertController::class, 'index'])->name('home');
 Route::get('/login', function () {
     return view('auth.login'); // Mengarahkan ke view auth.login
 })->name('login');

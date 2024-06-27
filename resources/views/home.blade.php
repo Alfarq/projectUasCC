@@ -47,7 +47,7 @@
             <div class="swiper sliderFeaturedPosts">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('img/post-slide-1.jpg');">
+                <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('img/sync.jpg');">
                     <div class="img-bg-inner">
                     <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
@@ -99,25 +99,6 @@
 <section id="posts" class="posts">
     <div class="container" data-aos="fade-up">
       <div class="row g-5">
-        <!-- {{-- @foreach ($concerts as $concert)
-            <div class="card shadow col-lg-4 m-2" style="box-shadow: 20px;">
-                <div class="post-entry-1 lg">
-                    <a href="single-post.html">
-                        <img src="{{ asset($concert->image) }}" class="img-fluid" style="height: 250px;" alt="{{ $concert->name }}">
-                    </a>
-                    <div class="post-meta">
-                        <span class="date">{{ $concert->organizer }}</span>
-                        <span class="mx-1">&bullet;</span>
-                        <span>{{ $concert->concert_date }}</span>
-                    </div>
-                    <h2>
-                        <a href="single-post.html">{{ $concert->name }}</a>
-                    </h2>
-                    <p class="mb-4 d-block">{{ $concert->description }}</p>
-                </div>
-            </div>
-        @endforeach --}} -->
-
         @foreach ($concerts as $concert)
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card shadow h-100">

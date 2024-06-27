@@ -36,7 +36,7 @@
     </style>
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{ route('concerts.index') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>MusikFest</h1>
@@ -44,7 +44,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="{{ route('concerts.index') }}">Home</a></li>
           <li class="dropdown"><a href="category.html"><span>Info Konser</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Juli</a></li></li>
@@ -53,9 +53,9 @@
               <li><a href="#">Oktober</a></li>
             </ul>
           </li>
-          <li><a href="single-post.html">Articles</a></li>       
-          <li><a href="about.html">Release</a></li>
-          <li><a href="contact.html">Media Partnership</a></li>
+          <li><a href="{{ route('concerts.index') }}">Articles</a></li>       
+          <li><a href="{{ route('concerts.index') }}">Release</a></li>
+          <li><a href="{{ route('concerts.index') }}">Media Partnership</a></li>
         </ul>
       </nav><!-- .navbar -->
 

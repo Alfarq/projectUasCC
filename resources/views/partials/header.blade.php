@@ -39,7 +39,7 @@
       <a href="{{ route('concerts.index') }}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>MusikFest</h1>
+        <h1>MusikFest</h1> <img src="{{ asset('img/logokita2.png') }}" alt="">
       </a>
 
       <nav id="navbar" class="navbar">

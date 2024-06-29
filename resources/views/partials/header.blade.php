@@ -48,7 +48,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{{ route('concerts.index') }}">Home</a></li>
-          <li class="dropdown"><a href="category.html"><span>Info Konser</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="{{ route('concerts.index') }}"><span>Info Konser</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Juli</a></li></li>
               <li><a href="#">Agustus</a></li>

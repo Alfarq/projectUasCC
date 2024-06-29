@@ -20,7 +20,7 @@
                         @endphp
                         @foreach ($concerts as $index => $concert)
                         <div class="swiper-slide">
-                            <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('{{ asset($staticImages[$index % count($staticImages)]) }}');">
+                            <a href="{{ route('concert.show', $concert->id) }}" class="img-bg d-flex align-items-end" style="background-image: url('{{ asset($staticImages[$index % count($staticImages)]) }}');">
                                 <div class="img-bg-inner">
                                     <h2>{{ $concert->name }}</h2>
                                     <p>{{ $concert->description }}</p>

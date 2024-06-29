@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="hero-slider" class="hero-slider mt-4 mb-2">
-    <div class="container-md mt-4" data-aos="fade-in">
+    <div class="container-md mt-5" data-aos="fade-in">
         <div class="row">
             <div class="col-12">
                 <div class="swiper sliderFeaturedPosts">

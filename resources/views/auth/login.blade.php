@@ -9,13 +9,13 @@
 </head>
 <body>
 
-<section class="vh-100" style="background-color: #D8E2DC;">
+<section class="vh-100" style="background-color: #9DB2BF;">
 <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-8">
             <div class="card" style="border-radius: 1rem;">
                 <div class="row g-0">
-                    <div class="col-md-6 col-lg-4 d-none d-md-block">
+                    <div class="col-6 col-lg-4 d-none d-md-block">
                         <video src="{{ asset('videos/konser.mp4') }}" autoplay loop muted alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; object-fit: cover; width: 100%; height: 100%;"></video>
                     </div>
                     <div class="col-md-6 col-lg-8 d-flex align-items-center justify-content-center">

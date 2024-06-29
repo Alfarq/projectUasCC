@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MusikFest</title>
     <link rel="icon" href="{{ asset('img/logocutt.png') }}" type="image/png">
-    <section class="vh-100" style="background-color: #D8E2DC;">
+    <section class="vh-100" style="background-color: #9DB2BF;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-8">

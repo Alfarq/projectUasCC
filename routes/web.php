@@ -7,11 +7,7 @@ use App\Http\Controllers\ConcertController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    if (Auth::check()) {
-        return redirect('/home');
-    } else {
-        return view('guest');
-    }
+    return redirect('/home');
 });
 
 Auth::routes();
